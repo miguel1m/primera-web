@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href= "css/css_index.css">
+    <link rel="stylesheet" href="css/iconos.css">
+    <meta name="viewport" content="width=device-width,usr-scalable=no, initial-scale=1.0">
+    <script src="js/modernizr-custom.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Alfareros por un día</title>
+</head>
+<body>
+    <header>    
+        <h1>
+            <a id= "logo" href= "index.html">
+                <figure>
+                </figure>
+            </a>
+            <a id="texth1" href="index.html">ALFAREROS POR UN DIA</a>
+        </h1>
+
+        <div class="iconmenu"  onclick="displayMenu()">
+                <span class="icon-menu"></span>
+        </div>
+
+        <nav class="menuopciones" id="menu">
+            <ul>
+                <li><a href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
+                <li><a href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
+                <li><a href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <section id="main-section">
+
+    </section> 
+
+    <footer>
+        <span>@mmm diseño</span> 
+        <span> - </span>
+        <span>www.alfarerosporundia.com</span>
+    </footer>
+
+    <script>
+
+        alertSize();
+
+        function alertSize() {
+
+        var myWidth = 0, myHeight = 0;
+
+        if( typeof( window.innerWidth ) == 'number' ) {
+            //No-IE
+            myWidth = window.innerWidth;
+            myHeight = window.innerHeight;
+        } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+            //IE 6+
+            myWidth = document.documentElement.clientWidth;
+            myHeight = document.documentElement.clientHeight;
+        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+            //IE 4 compatible
+            myWidth = document.body.clientWidth;
+            myHeight = document.body.clientHeight;
+        }
+
+            var display;
+            var icon_menu = document.getElementById("menu");
+            display = icon_menu.style.display;
+
+            if(myWidth < 770){
+                menu.style.display = "none";
+            }
+            else{
+                menu.style.display = "block";
+            }
+
+
+        }
+
+        function displayMenu(){
+            var display;
+            var icon_menu = document.getElementById("menu");
+            display = icon_menu.style.display;
+
+            if (display == "none"){
+                menu.style.display = "block";
+            }
+            else{
+                menu.style.display = "none";
+            }
+
+        }
+    </script>
+    
+
+</body>
+</html>
