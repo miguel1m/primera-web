@@ -12,11 +12,11 @@
 <body>
     <header>    
         <h1>
-            <a id= "logo" href= "index.html">
+            <a id= "logo" href= "#">
                 <figure>
                 </figure>
             </a>
-            <a id="texth1" href="index.html">ALFAREROS POR UN DIA</a>
+            <a id="texth1" href="#">ALFAREROS POR UN DIA</a>
         </h1>
 
         <div class="iconmenu"  onclick="displayMenu()">
@@ -25,17 +25,19 @@
 
         <nav class="menuopciones" id="menu">
             <ul>
-                <li><a href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
-                <li><a href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
-                <li><a href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
+                <li><a onclick="displayMenu()"href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
+                <li><a onclick="displayMenu()" href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
+                <li><a onclick="displayMenu()" href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
             </ul>
         </nav>
     </header> 
 
-    <section id="main-section">
-<!-- aq2ui van los nuevos comentasrios para probar el commit nuevo-->
-<!-- segundo cambio para repositorio remoto-->
-    </section> 
+    <div id="slider">
+        <section id="slide"></section>
+        <section id="slide"></section>
+        <section id="slide"></section>
+
+    </div> 
 
     <footer>
         <span>@mmm diseño</span> 
@@ -44,12 +46,13 @@
     </footer>
 
     <script>
-
+        
+        var myWidth = 0, myHeight = 0;
         alertSize();
 
         function alertSize() {
 
-        var myWidth = 0, myHeight = 0;
+        
 
         if( typeof( window.innerWidth ) == 'number' ) {
             //No-IE
@@ -71,27 +74,35 @@
 
             if(myWidth < 770){
                 menu.style.display = "none";
+                
+               
             }
             else{
                 menu.style.display = "block";
+                
             }
 
 
         }
 
         function displayMenu(){
+            myWidth = document.documentElement.clientWidth;
             var display;
             var icon_menu = document.getElementById("menu");
             display = icon_menu.style.display;
 
-            if (display == "none"){
+            if (display == "none" ){
                 menu.style.display = "block";
             }
-            else{
+            else if (myWidth < 770){ //si la pantalla es menor a 770 de ancho
                 menu.style.display = "none";
             }
 
         }
+
+
+
+
     </script>
     
 
