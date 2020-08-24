@@ -12,11 +12,11 @@
 <body>
     <header>    
         <h1>
-            <a id= "logo" href= "#">
+            <a onclick="navsection('inicio')" id= "logo" href= "#">
                 <figure>
                 </figure>
             </a>
-            <a id="texth1" href="#">ALFAREROS POR UN DIA</a>
+            <a onclick="navsection('inicio')" id="texth1" href="#">ALFAREROS POR UN DIA</a>
         </h1>
 
         <div class="iconmenu"  onclick="displayMenu()">
@@ -25,17 +25,17 @@
 
         <nav class="menuopciones" id="menu">
             <ul>
-                <li><a onclick="displayMenu()"href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
-                <li><a onclick="displayMenu()" href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
+                <li><a onclick="displayMenu(),navsection('sobremi')"href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
+                <li><a onclick="displayMenu(), navsection('servicios')" href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
                 <li><a onclick="displayMenu()" href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
             </ul>
         </nav>
     </header> 
 
     <div id="slider">
-        <section id="slide"></section>
-        <section id="slide"></section>
-        <section id="slide"></section>
+        <section class="slide" id= "inicio"></section>
+        <section class="slide" id= "sobremi"></section>
+        <section class="slide" id= "servicios"></section>
 
     </div> 
 
@@ -51,38 +51,30 @@
         alertSize();
 
         function alertSize() {
-
-        
-
-        if( typeof( window.innerWidth ) == 'number' ) {
-            //No-IE
-            myWidth = window.innerWidth;
-            myHeight = window.innerHeight;
-        } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-            //IE 6+
-            myWidth = document.documentElement.clientWidth;
-            myHeight = document.documentElement.clientHeight;
-        } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-            //IE 4 compatible
-            myWidth = document.body.clientWidth;
-            myHeight = document.body.clientHeight;
-        }
+            if( typeof( window.innerWidth ) == 'number' ) {
+                //No-IE
+                myWidth = window.innerWidth;
+                myHeight = window.innerHeight;
+            } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+                //IE 6+
+                myWidth = document.documentElement.clientWidth;
+                myHeight = document.documentElement.clientHeight;
+            } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+                //IE 4 compatible
+                myWidth = document.body.clientWidth;
+                myHeight = document.body.clientHeight;
+            }
 
             var display;
             var icon_menu = document.getElementById("menu");
             display = icon_menu.style.display;
 
             if(myWidth < 770){
-                menu.style.display = "none";
-                
-               
+                menu.style.display = "none";   
             }
             else{
                 menu.style.display = "block";
-                
             }
-
-
         }
 
         function displayMenu(){
@@ -97,13 +89,32 @@
             else if (myWidth < 770){ //si la pantalla es menor a 770 de ancho
                 menu.style.display = "none";
             }
-
         }
 
+        function navsection(nav){
+            // alert("ok");
+            var secciones = new Array(2);
+            secciones[0] = "inicio";
+            secciones[1] = "sobremi";
+            secciones[2] = "servicios";
 
+            var seccionactual;
 
+            for (var i=0; i<3; i++){
+                seccionactual = document.getElementById(secciones[i]);
+                seccionactual.style.display = "none";
+            
+            if (secciones[i] == nav){
+                seccionactual.style.display = "block";
+            }
+            // else{
+            //     seccionactual.style.display = "none";
+            // }
+        }
+        }
 
     </script>
+    
     
 
 </body>
