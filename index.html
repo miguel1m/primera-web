@@ -39,6 +39,8 @@
 
     </div> 
 
+    <!-- Todo Formulario de contacto-->
+
     <footer>
         <span>@mmm diseño</span> 
         <span> - </span>
@@ -46,6 +48,11 @@
     </footer>
 
     <script>
+
+        var secciones = new Array(2);    
+        secciones[0] = "inicio";
+        secciones[1] = "sobremi";
+        secciones[2] = "servicios";
         
         var myWidth = 0, myHeight = 0;
         alertSize();
@@ -93,44 +100,43 @@
 
         function navsection(nav){
             // alert("ok");
-            var secciones = new Array(2);
-            secciones[0] = "inicio";
-            secciones[1] = "sobremi";
-            secciones[2] = "servicios";
-
-            var colorfondobody;
-            var colorfondomenu;
-
             for (var i=0; i<3; i++){
                 var seccionactual = document.getElementById(secciones[i]);
                 seccionactual.style.display = "none";
             
-            if (secciones[i] == nav){
-                seccionactual.style.display = "block";
+                if (secciones[i] == nav){
+                    seccionactual.style.display = "block";
 
-                if(secciones[i] == "inicio"){
-                    colorfondobody = "#233d58";
-                    colorfondomenu = "#233d58";
-                }else{
-                    colorfondobody = "#f1f1f1";
-                    colorfondomenu = "#29abe2";
+                  seleccionarcolor(i);
+
                 }
-
-                seccionactual.style.background = colorfondobody;
-
-                var navactual = document.getElementsByTagName("header")[0];
-                navactual.style.background = colorfondomenu;
-
-                var footeractual = document.getElementsByTagName("footer")[0];
-                footeractual.style.background = colorfondomenu;
-
-
-               
-
-            }
            
+            }
         }
-        }
+
+        function seleccionarcolor(indice){
+
+            var colorfondobody;
+            var colorfondomenu;
+
+            if(secciones[indice] == "inicio"){
+                        colorfondobody = "#233d58";
+                        colorfondomenu = "#233d58";
+                    }else{
+                        colorfondobody = "#f1f1f1";
+                        colorfondomenu = "#29abe2";
+                    }
+                    var seccionactual = document.getElementById(secciones[indice]);
+                    seccionactual.style.background = colorfondobody;
+
+                    var navactual = document.getElementsByTagName("header")[0];
+                    navactual.style.background = colorfondomenu;
+
+                    var footeractual = document.getElementsByTagName("footer")[0];
+                    footeractual.style.background = colorfondomenu;
+
+                }
+        
 
     </script>
     
