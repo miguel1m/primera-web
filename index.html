@@ -33,9 +33,9 @@
     </header> 
 
     <div id="slider">
-        <section class="slide" id= "inicio"></section>
-        <section class="slide" id= "sobremi"></section>
-        <section class="slide" id= "servicios"></section>
+        <section class="slide" id= "inicio"><p>Inicio</p></section>
+        <section class="slide" id= "sobremi"><p>Sobre Mí</p></section>
+        <section class="slide" id= "servicios"><p>Servicios</p></section>
 
     </div> 
 
@@ -98,18 +98,37 @@
             secciones[1] = "sobremi";
             secciones[2] = "servicios";
 
-            var seccionactual;
+            var colorfondobody;
+            var colorfondomenu;
 
             for (var i=0; i<3; i++){
-                seccionactual = document.getElementById(secciones[i]);
+                var seccionactual = document.getElementById(secciones[i]);
                 seccionactual.style.display = "none";
             
             if (secciones[i] == nav){
                 seccionactual.style.display = "block";
+
+                if(secciones[i] == "inicio"){
+                    colorfondobody = "#233d58";
+                    colorfondomenu = "#233d58";
+                }else{
+                    colorfondobody = "#f1f1f1";
+                    colorfondomenu = "#29abe2";
+                }
+
+                seccionactual.style.background = colorfondobody;
+
+                var navactual = document.getElementsByTagName("header")[0];
+                navactual.style.background = colorfondomenu;
+
+                var footeractual = document.getElementsByTagName("footer")[0];
+                footeractual.style.background = colorfondomenu;
+
+
+               
+
             }
-            // else{
-            //     seccionactual.style.display = "none";
-            // }
+           
         }
         }
 
