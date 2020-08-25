@@ -39,7 +39,7 @@
 
     </div> 
 
-    <!-- Todo Formulario de contacto-->
+    <!-- ToDo Formulario de contacto-->
 
     <footer>
         <span>@mmm diseño</span> 
@@ -103,14 +103,11 @@
             for (var i=0; i<3; i++){
                 var seccionactual = document.getElementById(secciones[i]);
                 seccionactual.style.display = "none";
-            
+          
                 if (secciones[i] == nav){
                     seccionactual.style.display = "block";
-
-                  seleccionarcolor(i);
-
+                    seleccionarcolor(i); 
                 }
-           
             }
         }
 
@@ -118,7 +115,7 @@
 
             var colorfondobody;
             var colorfondomenu;
-
+           
             if(secciones[indice] == "inicio"){
                         colorfondobody = "#233d58";
                         colorfondomenu = "#233d58";
@@ -133,8 +130,7 @@
                     navactual.style.background = colorfondomenu;
 
                     var footeractual = document.getElementsByTagName("footer")[0];
-                    footeractual.style.background = colorfondomenu;
-
+                    footeractual.style.background = colorfondomenu;                                        
                 }
         
 
