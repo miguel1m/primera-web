@@ -39,13 +39,30 @@
 
     </div> 
 
+    <div id="formContacto">
+        <form action="contact.php" id= "form1" name= "form1" method= "POST">
+            <p>"Dí Hola!"</p>
+            <div id="close_form">
+                <figure id="logo_mensaje">
+                    <img src="" alt=""/>
+                </figure>
+                <input type="text" name="name" id="name" placeholder = "Tu nombre" onfocus="if(this.placeholder =='')this.placeholder = 'Tu nombre'"/>
+                <input type="text" name="email" id="email" placeholder = "Tu email" onfocus="if(this.placeholder =='')this.placeholder = 'Tu email'"/>
+                <textarea name="mensaje" id="mensaje" placeholder = "Tu mensaje" onfocus="if(this.placeholder =='')this.placeholder = 'Tu mensaje'"></textarea>   
+
+            </div>
+            <input type="submit" name="Submit" id="button" value="ENVIAR" />
+        </form>
+
+    </div>
+
     <!-- ToDo Formulario de contacto-->
 
-    <footer>
+    <!-- <footer>
         <span>@mmm diseño</span> 
         <span> - </span>
         <span>www.alfarerosporundia.com</span>
-    </footer>
+    </footer> -->
 
     <script>
 
