@@ -41,17 +41,18 @@
 
     <div id="formContacto">
         <form action="contact.php" id= "form1" name= "form1" method= "POST">
-            <p>"Dí Hola!"</p>
-            <div id="close_form">
-                <figure id="logo_mensaje">
-                    <img src="" alt=""/>
-                </figure>
-                <input type="text" name="name" id="name" placeholder = "Tu nombre" onfocus="if(this.placeholder =='')this.placeholder = 'Tu nombre'"/>
-                <input type="text" name="email" id="email" placeholder = "Tu email" onfocus="if(this.placeholder =='')this.placeholder = 'Tu email'"/>
-                <textarea name="mensaje" id="mensaje" placeholder = "Tu mensaje" onfocus="if(this.placeholder =='')this.placeholder = 'Tu mensaje'"></textarea>   
 
-            </div>
-            <input type="submit" name="Submit" id="button" value="ENVIAR" />
+            <p>"Dí Hola!"</p>
+            <div id="close_form"> </div>
+            <figure id="logo_mensaje">
+                <img src="img/envelope-open-o.svg" alt="Contacte con nosotros"/>
+            </figure>
+            <input type="text" name="name" id="name" placeholder = "Tu nombre" onfocus="if(this.placeholder =='')this.placeholder = 'Tu nombre'"/>
+            <input type="text" name="email" id="email" placeholder = "Tu email" onfocus="if(this.placeholder =='')this.placeholder = 'Tu email'"/>
+            <textarea name="mensaje" id="mensaje" placeholder = "Tu mensaje" onfocus="if(this.placeholder =='')this.placeholder = 'Tu mensaje'"></textarea>   
+
+           
+            <input type="submit" name="Submit" id="button" value="ENVIAR"/>
         </form>
 
     </div>
@@ -134,26 +135,24 @@
             var colorfondomenu;
            
             if(secciones[indice] == "inicio"){
-                        colorfondobody = "#233d58";
-                        colorfondomenu = "#233d58";
-                    }else{
-                        colorfondobody = "#f1f1f1";
-                        colorfondomenu = "#29abe2";
-                    }
-                    var seccionactual = document.getElementById(secciones[indice]);
-                    seccionactual.style.background = colorfondobody;
+                colorfondobody = "#233d58";
+                colorfondomenu = "#233d58";
+            }else{
+                colorfondobody = "#f1f1f1";
+                colorfondomenu = "#29abe2";
+            }
+                   
+            var seccionactual = document.getElementById(secciones[indice]);
+            seccionactual.style.background = colorfondobody;
 
-                    var navactual = document.getElementsByTagName("header")[0];
-                    navactual.style.background = colorfondomenu;
+            var navactual = document.getElementsByTagName("header")[0];
+            navactual.style.background = colorfondomenu;
 
-                    var footeractual = document.getElementsByTagName("footer")[0];
-                    footeractual.style.background = colorfondomenu;                                        
-                }
-        
+            // var footeractual = document.getElementsByTagName("footer")[0];
+            // footeractual.style.background = colorfondomenu;                                        
+        }   
 
     </script>
-    
-    
 
 </body>
 </html>
