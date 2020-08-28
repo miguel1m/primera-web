@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lndfnz');
-  src:  url('fonts/icomoon.eot?lndfnz#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?lndfnz') format('truetype'),
-    url('fonts/icomoon.woff?lndfnz') format('woff'),
-    url('fonts/icomoon.svg?lndfnz#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?eoifka');
+  src:  url('fonts/icomoon.eot?eoifka#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?eoifka') format('truetype'),
+    url('fonts/icomoon.woff?eoifka') format('woff'),
+    url('fonts/icomoon.svg?eoifka#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -29,7 +29,7 @@
   content: "\e900";
 }
 .icon-home2:before {
-  content: "\e901";
+  content: "\e903";
 }
 .icon-camera:before {
   content: "\e90f";
@@ -135,4 +135,10 @@
 }
 .icon-cross:before {
   content: "\ea0f";
+}
+.icon-paper-plane:before {
+  content: "\e901";
+}
+.icon-envelope-open-o:before {
+  content: "\e902";
 }

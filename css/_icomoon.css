@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?lndfnz');
-  src:  url('fonts/icomoon.eot?lndfnz#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?lndfnz') format('truetype'),
-    url('fonts/icomoon.woff?lndfnz') format('woff'),
-    url('fonts/icomoon.svg?lndfnz#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?8wu7n4');
+  src:  url('fonts/icomoon.eot?8wu7n4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8wu7n4') format('truetype'),
+    url('fonts/icomoon.woff?8wu7n4') format('woff'),
+    url('fonts/icomoon.svg?8wu7n4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  /* speak: none; */
+  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -32,7 +32,7 @@
   content: "\e901";
 }
 .icon-camera:before {
-  content: "\e90f";
+  content: "\e90f"; 
 }
 .icon-play:before {
   content: "\e912";
@@ -126,20 +126,4 @@
 }
 .icon-git:before {
   content: "\eae7";
-}
-.icon-pushpin1:before {
-  content: "\e949";
-}
-.icon-user:before {
-  content: "\e971";
-}
-.icon-cross:before {
-  content: "\ea0f";
-}
-.icon-earth:before {
-  content: "\e9ca";
-}
-
-.icon-paper-plane:before {
-  content: "\e999";
 }
