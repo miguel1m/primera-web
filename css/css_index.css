@@ -4,7 +4,7 @@ body{
      margin: 0;
      padding: 0;
      width: 100%;
-     height: 100%;
+     height: 100vh;
      font-size: 16px;
      font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
@@ -72,9 +72,10 @@ div.iconmenu{
     text-align: center;
 }
 div.iconmenu span{
-    font-size:30px;
+    font-size:35px;
     line-height: 50px;
-    color: rgb(11, 2, 24); 
+    color: #f1f1f1; 
+    font-weight: lighter;
 }
 
 
@@ -129,38 +130,37 @@ nav.menuopciones{
         }
 
 
-        header nav ul li:hover{
-            background: #29abe2;
-
-        }
+        /* header nav ul li:hover{
+             background: #29abe2; 
+        } */
 
 #slider{
     position: relative;
-    width: 100%;
-    height: 900px;
+    /* width: 100%; */
     /* background: #000; */
 }
 
     #slider section.slide{
     position: absolute;
     width: 100%;
+    height: 100vh;
     /* border: 2px red solid; */
     top: 0px;
     left: 0px;
     }
 
     #slider #inicio{
-        /* height: 100%; */
+        /* height: 80vh; */
         /* background: blue; */
     }
     #slider #sobremi{
-        /* height: 100%; */
-        display:none;
+        /* height: 80vh; */
+        /* display:none; */
         /* background: yellow; */
     }
     #slider #servicios{
-        /* height:  100%; */
-        display:none;
+        /* height:  80vh; */
+        /* display:none; */
         /* background: green; */
     }
 
@@ -269,44 +269,104 @@ nav.menuopciones{
 }
 
 #botoncontacto::before{
- font-family: 'icomoon';
- content: '\e901';   
- font-size: 35px;
- position: relative;
- top: 12px;
- left: 10px;
- 
-
+    font-family: 'icomoon';
+    content: '\e901';   
+    font-size: 35px;
+    position: relative;
+    top: 12px;
+    left: 10px;
 }
 
 
 footer{
-     position: fixed;
-    display: block;
-    /* top: 0px;*/
-    margin: 0px;
-    padding: 0px;
-    /* left:0px; */
-    bottom: 0px;
-    width:100%;
-    height: 50px;
-    background-color: #233d58;
+    width: 100%;
+    background: black;
+    color: white;
     text-align: center;
-    /* border: solid 1px black; */
+    z-index: 90;
+    height: 200px;
+    position: fixed;
+    bottom: -180px;
+    text-align: center;
+    transition-duration: 0.5s;
 }
 
+footer .rrss{
+    margin-top: 70px;
+    width: 100%;
+    height: 40px;
+    /* background: white; */
+    
+}
 
+footer:hover{
+    bottom: 0px;
+}
 
+footer::after{
+    font-family: "icomoon";
+    content: '\e904';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    background: black;
+    color: white;
+    margin-top: -40px;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    font-size: 5em;
+    transition-duration: 0.5s;
+    transform-origin: center;
+}
 
-footer span{
-    margin: 0px;
-    padding: 0px;
+footer:hover::after{
+    transform: rotate(0deg);
+   /* transform-origin: center;*/
+    background: white;
     color: black;
-    line-height: 50px; 
-    font-size: 0.9em;
-    font-weight: bolder;
-    font-style: italic;
+
 }
+
+footer .rrss a{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    /* background: green; */
+    display: inline-block;
+    position: relative;
+    
+}
+footer .rrss a::before{
+    font-family: 'icomoon';
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    font-size: 2em;
+    top: 5px;
+    left: 5px;
+}
+footer .rrss a:nth-child(1)::before{
+    content: "\ea90";
+}
+footer .rrss a:nth-child(2)::before{
+    content: "\ea92";
+}
+footer .rrss a:nth-child(3)::before{
+    content: "\ea86";
+}
+footer .rrss a:nth-child(4)::before{
+    content: "\ea93";
+}
+
+footer p{
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: white;
+}
+
 
 @media screen and (min-width: 200px){
 
@@ -377,9 +437,16 @@ header nav ul li:active{
     /* background: rgb(5, 133, 107); */
     border-bottom: solid 3px #233d58;
 }
+header nav  ul li a span.icono{
+    display:none;
+}
 
 #formContacto{
     width: 400px;
+}
+footer .rrss a:nth-child(4)::before{
+    content: "\ea93";
+    display: none;
 }
     
 }
