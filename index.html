@@ -19,7 +19,7 @@
             <a onclick="navsection('inicio')" id="texth1" href="#">ALFAREROS POR UN DIA</a>
         </h1>
 
-        <div class="iconmenu"  onclick="displayMenu()">
+        <div class="iconmenu"  onclick="displayMenu(),displayformulario('none')">
                 <span class="icon-menu"></span>
         </div>
 
@@ -27,22 +27,22 @@
             <ul>
                 <li><a onclick="displayMenu(),navsection('sobremi')"href="#"><span class="icon-location icono"></span>Sobre mí</a></li>
                 <li><a onclick="displayMenu(), navsection('servicios')" href="#"><span class="icon-earth icono"></span>Servicios</a> </li>
-                <li><a onclick="displayMenu()" href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
+                <li><a onclick="displayMenu(), displayformulario('block')"" href="#"><span class="icon-mail2 icono"></span>Contacto</a></li>
             </ul>
         </nav>
     </header> 
 
     <div id="slider">
-        <section class="slide" id= "inicio"><p>Inicio</p></section>
-        <section class="slide" id= "sobremi"><p>Sobre Mí</p></section>
-        <section class="slide" id= "servicios"><p>Servicios</p></section>
+        <section class="slide" id= "inicio" onclick="displayformulario('none')"><p>Inicio</p></section>
+        <section class="slide" id= "sobremi" onclick="displayformulario('none')"><p>Sobre Mí</p></section>
+        <section class="slide" id= "servicios" onclick="displayformulario('none')"><p>Servicios</p></section>
 
     </div> 
 
     <div id="formContacto">
         <form action="contact.php" id= "form1" name= "form1" method= "POST">
             
-            <div id="close_form"> </div>
+            <div id="close_form" onclick="displayformulario('none')"> </div>
             <figure id="logo_mensaje">
                 <img src="img/envelope-open-o.svg" alt="Contacte con nosotros"/>
             </figure>
@@ -59,7 +59,7 @@
 
     </div>
 
-    <div id="botoncontacto"></div>
+    <div id="botoncontacto" onclick="displayformulario('block')"></div>
 
     <!-- ToDo Formulario de contacto-->
 
@@ -154,7 +154,12 @@
 
             // var footeractual = document.getElementsByTagName("footer")[0];
             // footeractual.style.background = colorfondomenu;                                        
-        }   
+        }
+        
+        function displayformulario(estado){
+            var form = document.getElementById("formContacto");
+            form.style.display = estado;
+        }
 
     </script>
 

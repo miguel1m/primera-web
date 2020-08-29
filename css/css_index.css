@@ -150,16 +150,16 @@ nav.menuopciones{
     }
 
     #slider #inicio{
-        height: 100%;
+        /* height: 100%; */
         /* background: blue; */
     }
     #slider #sobremi{
-        height: 100%;
+        /* height: 100%; */
         display:none;
         /* background: yellow; */
     }
     #slider #servicios{
-        height:  100%;
+        /* height:  100%; */
         display:none;
         /* background: green; */
     }
@@ -173,11 +173,11 @@ nav.menuopciones{
 #formContacto{
     position: absolute;
     right: 0px;
-    top: 50px;
+    top: 53px;
    /* background: red;*/
    /* border: 1px solid green;*/
    height: 100vh;
-    width: 250px;
+    width: 300px;
     border-top: 1px solid black;
     box-shadow: 0px 0px 3px #9f9e9e;
     z-index: 999;
@@ -259,7 +259,7 @@ nav.menuopciones{
     border-radius: 50%;
     color: white;
     z-index:80;
-    right: 10px;
+    right: 40px;
     top: 80vh;
 
 }
@@ -271,7 +271,12 @@ nav.menuopciones{
 #botoncontacto::before{
  font-family: 'icomoon';
  content: '\e901';   
- font-size: 40px;
+ font-size: 35px;
+ position: relative;
+ top: 12px;
+ left: 10px;
+ 
+
 }
 
 
@@ -324,7 +329,7 @@ nav.menuopciones{
     top: 0px;
     right: 0px;
     width: 40%;
-    min-width: 370px;
+    min-width:390px;
     height: 100%;  
     margin: 0px 15px;
     /* background:rgb(5, 133, 107);  */
@@ -371,6 +376,10 @@ header nav ul li:hover{
 header nav ul li:active{
     /* background: rgb(5, 133, 107); */
     border-bottom: solid 3px #233d58;
+}
+
+#formContacto{
+    width: 400px;
 }
     
 }
