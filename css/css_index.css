@@ -291,7 +291,7 @@ footer{
     z-index: 90;
     height: 200px;
     position: fixed;
-    bottom: -180px;
+    bottom: -170px;
     text-align: center;
     transition-duration: 0.5s;
 }
